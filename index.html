@@ -111,11 +111,11 @@
     </section>
     <section class="section-why" id="section-why">
       <div class="container why-container">
-        <h2 class="section-title">Чому люди <span class="brand-color">обирають нас</span></h2>
+        <h2 class="section-title">Чому люди <span class="brand-color"> <br>обирають нас</span></h2>
         <ul class="why-list">
           <li>
-            <article>
-              <svg class="icon-color-brand" width="48px" height="48px">
+            <article class="why-card">
+              <svg class="icon-color-brand ddd" widht="48px" height="48px">
                 <use href="./images/icons.svg#icon-beauty-atom"></use>
               </svg>
               <!-- <img src="./images/beauty-atom.svg" alt="atom"> -->
@@ -123,7 +123,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="why-card">
               <svg class="icon-color-brand" widht="48px" height="48px">
                 <use href="./images/icons.svg#icon-beauty-soap"></use>
               </svg>
@@ -132,7 +132,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="why-card">
               <svg class="icon-color-brand" widht="48px" height="48px">
                 <use href="./images/icons.svg#icon-beauty-crown"></use>
               </svg>
@@ -188,12 +188,23 @@
           </iframe>
           <div class="form-decor form-container">
             <p class="form-title">Запишіться <span class="brand-color">безкоштовно</span> та отримайте подарунок</p>
-            <div>
-              <!-- FORM -->
-            </div>
-            <button class="button-form btn contacts-btn">
-              Записатись безкоштовно
-            </button>
+            <form name="contact-form" autocomplete="off">
+              <div class="form-field">
+                <label class="form-label visually-hidden" for="user-name">Ваше ім'я та прізвище</label>
+                <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ваше ім'я та прізвище" minlength="2" maxlength="20" required>
+              </div>
+              <div class="form-field">
+                <label class="form-label visually-hidden" for="user-tel">Ваш номер телефону</label>
+                <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Ваш номер телефону" required pattern="^\+[0-9]{12}">
+              </div>
+              <div class="form-field">
+                <label class="form-label visually-hidden" for="user-email">Ваша електронна пошта</label>
+                <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Ваша електронна пошта" required>
+              </div>
+              <button class="button-form btn contacts-btn" type="submit">
+                Записатись безкоштовно
+              </button>
+            </form>
             <div class="color-note description form-description">
               <p>Натискаючи на кнопку я погоджуюсь</p>
               <a class="color-note" href="#">з політикою конфіденційності</a>
@@ -278,5 +289,12 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden">
+    <div class="modal">
+
+    </div>
+
+    <script src="./js/modal.js"></script>
+  </div>
 </body>
 </html>
