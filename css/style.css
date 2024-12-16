@@ -29,6 +29,16 @@
   --color-gray: #747272;
 }
 
+@keyframes star-animation {
+  from {
+    rotate: 360deg;
+    scale: 10;
+  }
+
+  to {
+  }
+}
+
 /* Base */
 *,
 *::after,
@@ -280,6 +290,7 @@ p {
 .star-two,
 .star-three {
   position: absolute;
+  animation: star-animation 3s;
 }
 
 .star-one {
