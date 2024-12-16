@@ -81,7 +81,7 @@
         <p class="hero-typename">Косметологічна клініка</p>
         <h1 class="hero-title brand-color">Beauty<br>Zone</h1>
         <div class="hero-btn-container">
-          <button class="button-form btn hero-btn">Замовити дзвінок</button>
+          <button class="button-form btn hero-btn modal-btn-open">Замовити дзвінок</button>
           <p class="description">Запишись та отримай безкоштовну консультацію нашого косметолога</p>
         </div>
       </div>
@@ -188,7 +188,7 @@
           </iframe>
           <div class="form-decor form-container">
             <p class="form-title">Запишіться <span class="brand-color">безкоштовно</span> та отримайте подарунок</p>
-            <form name="contact-form" autocomplete="off">
+            <form class="contact-form" name="contact-form" autocomplete="off">
               <div class="form-field">
                 <label class="form-label visually-hidden" for="user-name">Ваше ім'я та прізвище</label>
                 <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ваше ім'я та прізвище" minlength="2" maxlength="20" required>
@@ -289,9 +289,40 @@
       </div>
     </div>
   </footer>
-  <div class="backdrop is-hidden">
-    <div class="modal">
 
+
+
+  <div class="backdrop is-hidden">
+    <div class="modal form-container">
+      <h2 class="modal-title">Замовити <br> дзвінок</h2>
+      <p class="modal-description">Запишіться <span class="brand-color">безкоштовно</span><br> та отримайте подарунок</p>
+      <button class="modal-btn-close" type="button">
+        <img src="./images/krest.svg" alt="">
+      </button>
+      <form class="contact-form" name="contact-form" autocomplete="off">
+        <div class="form-field-modal">
+          <label class="form-label visually-hidden" for="user-name">Ваше ім'я та прізвище</label>
+          <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ваше ім'я та прізвище"
+            minlength="2" maxlength="20" required>
+        </div>
+        <div class="form-field-modal">
+          <label class="form-label visually-hidden" for="user-tel">Ваш номер телефону</label>
+          <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Ваш номер телефону" required
+            pattern="^\+[0-9]{12}">
+        </div>
+        <div class="form-field-modal">
+          <label class="form-label visually-hidden" for="user-email">Ваша електронна пошта</label>
+          <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Ваша електронна пошта"
+            required>
+        </div>
+        <button class="button-form btn contacts-btn" type="submit">
+          Записатись безкоштовно
+        </button>
+      </form>
+      <div class="color-note description form-description">
+        <p>Натискаючи на кнопку я погоджуюсь</p>
+        <a class="color-note" href="#">з політикою конфіденційності</a>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
